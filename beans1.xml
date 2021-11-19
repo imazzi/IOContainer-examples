@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+
+    <bean id="book" class="beans.Book">
+        <property name="bookTitle" value="Spring beanFactory"/>
+        <property name="bookType" value="Reference"/>
+
+        <property name="bookPublisher">
+            <bean class="beans.BookPublisher">
+                <property name="publisherId" value="101"/>
+                <property name="firstName" value="asmae"/>
+                <property name="lastName" value="pham"/>
+            </bean>
+        </property>
+
+    </bean>
+    <bean id="bookPublisher2" class="beans.BookPublisher">
+        <property name="publisherId" value="101"/>
+        <property name="firstName" value="asmae"/>
+        <property name="lastName" value="pham"/>
+    </bean>
+</beans>
